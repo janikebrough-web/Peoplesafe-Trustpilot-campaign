@@ -384,8 +384,9 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   justify-content: center;
 }
-.pillar-quote__text { color: var(--navy-deep); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.05rem; margin: 0 0 12px; }
-.pillar-quote__stars { color: var(--navy-deep); letter-spacing: 2px; }
+.pillar--quote .pillar-quote__stat { color: var(--navy-deep); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3rem; line-height: 1; margin: 0 0 12px; }
+.pillar-quote__unit { font-size: 1.2rem; font-weight: 700; margin-left: 4px; }
+.pillar--quote .pillar-quote__caption { color: var(--navy-deep); font-size: .92rem; margin: 0; opacity: .85; }
 
 /* ---------- Stat / marquee ---------- */
 .stat { background: linear-gradient(135deg, var(--navy-deep), var(--navy-mid)); padding: 100px 0 60px; overflow: hidden; }

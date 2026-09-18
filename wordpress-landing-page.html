@@ -1,0 +1,162 @@
+<!--
+  Peoplesafe — Trustpilot campaign landing page
+  ================================================
+  Paste this into the WordPress Block Editor's Code Editor view
+  (Options menu ⋮ → "Code editor", or Ctrl/Cmd+Shift+Alt+M) for a new page.
+
+  Built from the actual homepage block set you sent over, so it renders
+  with your real theme styling rather than a bespoke one-off design:
+    - cb-home-hero-2024, cb-text-image-2024, cb-logo-slider,
+      cb-case-study-quotes-2024, cb-stat-spinner and cb-gradient-cta
+      are reused with their real field keys.
+    - The Trustpilot TrustBox widget and [trustpilot_slider] shortcode
+      are copied verbatim from the homepage — same business unit / token.
+    - The three "why we're rated Excellent" tiles use cb-text-image-2024
+      with no image attached (image IDs live in your Media Library, which
+      this session can't reach) — add a photo per block if you'd like one.
+    - The "Compare the ratings" block has no equivalent existing component,
+      so it's hand-built as a self-contained wp:html block (scoped styles
+      + a small inline script for the bar-fill animation, no external
+      dependencies).
+    - Logo slider + case study quotes reuse the exact attachment IDs and
+      testimonials already live on the homepage.
+
+  Two links that need your confirmation before publishing:
+    - Customer Success and Onboarding tiles have no CTA button linked
+      (no confirmed URL for either team's page) — add one if you have it.
+    - Everything else links to already-confirmed real pages/URLs.
+-->
+
+<!-- wp:acf/cb-home-hero-2024 {"name":"acf/cb-home-hero-2024","data":{"title":"Rated Excellent","_title":"field_664ca526e7d04","title_anim":"by the people we protect.\r\nby the reviews that prove it.","_title_anim":"field_664ca5387af61","content":"Peoplesafe is rated Excellent on Trustpilot, verified by the lone workers and businesses who rely on us every day. See the reviews, then see why.","_content":"field_664ca526eb77b","cta":{"title":"Get a Quote","url":"https://peoplesafe.co.uk/get-your-quote/","target":""},"_cta":"field_664ca526f2c40","cta_book_a_demo":"","_cta_book_a_demo":"field_664ca52702491","cta2":{"title":"Read our Reviews","url":"https://uk.trustpilot.com/review/peoplesafe.co.uk","target":"_blank"},"_cta2":"field_664ca527061a7","modal_cta":"","_modal_cta":"field_664ca52709a9f"},"mode":"edit"} /-->
+
+<!-- wp:html -->
+<!-- TrustBox widget - Horizontal -->
+<div class="trustpilot-widget" data-locale="en-GB" data-template-id="5406e65db0d04a09e042d5fc" data-businessunit-id="60bf889cafe44a000151a439" data-style-height="28px" data-style-width="100%" data-token="8fe08d42-3f69-4937-a4f9-0a4e3a278888">
+  <a href="https://uk.trustpilot.com/review/peoplesafe.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<section class="ps-compare" aria-labelledby="ps-compare-heading">
+  <style>
+    .ps-compare{max-width:1180px;margin:0 auto;padding:0 24px;text-align:center;font-family:inherit;}
+    .ps-compare__eyebrow{color:#0b4d69;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 12px;}
+    .ps-compare h2{color:#06344a;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.2;margin:0 0 14px;}
+    .ps-compare__sub{max-width:52ch;margin:0 auto 40px;color:#5c7a8c;font-size:1.02rem;}
+    .ps-compare__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:left;}
+    .ps-compare__card{background:#fff;border:1px solid #e2ebee;border-radius:14px;padding:24px 20px;position:relative;}
+    .ps-compare__card--lead{background:#06344a;border-color:#06344a;}
+    .ps-compare__badge{position:absolute;top:-12px;left:20px;background:#f5a938;color:#06344a;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:5px 12px;border-radius:999px;}
+    .ps-compare__head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;gap:8px;}
+    .ps-compare__name{font-weight:700;font-size:1.02rem;color:#06344a;}
+    .ps-compare__card--lead .ps-compare__name{color:#fff;}
+    .ps-compare__score{font-weight:800;font-size:1.7rem;color:#06344a;}
+    .ps-compare__card--lead .ps-compare__score{color:#f5a938;}
+    .ps-compare__bar{height:8px;border-radius:999px;background:#e2ebee;overflow:hidden;margin-bottom:10px;}
+    .ps-compare__card--lead .ps-compare__bar{background:rgba(255,255,255,.15);}
+    .ps-compare__fill{height:100%;width:0;border-radius:999px;transition:width 1s cubic-bezier(.22,.9,.32,1);}
+    .ps-compare__reviews{font-size:.82rem;color:#5c7a8c;}
+    .ps-compare__card--lead .ps-compare__reviews{color:#b9cbd4;}
+    .ps-compare__footnote{margin-top:32px;font-size:.85rem;color:#5c7a8c;}
+    .ps-compare__footnote a{color:#0b4d69;font-weight:600;}
+    @media(max-width:780px){.ps-compare__grid{grid-template-columns:repeat(2,1fr);}.ps-compare__card--lead{grid-column:span 2;}}
+    @media(max-width:480px){.ps-compare__grid{grid-template-columns:1fr;}.ps-compare__card--lead{grid-column:span 1;}}
+  </style>
+
+  <p class="ps-compare__eyebrow">The proof, not the promise</p>
+  <h2 id="ps-compare-heading">Compare the ratings.<br>Then choose who protects your people.</h2>
+  <p class="ps-compare__sub">These are independently verified Trustpilot scores &mdash; not ours to spin.</p>
+
+  <div class="ps-compare__grid">
+    <div class="ps-compare__card ps-compare__card--lead">
+      <span class="ps-compare__badge">Highest rated</span>
+      <div class="ps-compare__head"><span class="ps-compare__name">Peoplesafe</span><span class="ps-compare__score">4.7</span></div>
+      <div class="ps-compare__bar"><div class="ps-compare__fill" data-pct="94" style="background:#00b67a"></div></div>
+      <span class="ps-compare__reviews">199 reviews</span>
+    </div>
+    <div class="ps-compare__card">
+      <div class="ps-compare__head"><span class="ps-compare__name">SoloProtect</span><span class="ps-compare__score">3.4</span></div>
+      <div class="ps-compare__bar"><div class="ps-compare__fill" data-pct="68" style="background:#ffce00"></div></div>
+      <span class="ps-compare__reviews">14 reviews</span>
+    </div>
+    <div class="ps-compare__card">
+      <div class="ps-compare__head"><span class="ps-compare__name">Hollie Guard</span><span class="ps-compare__score">2.9</span></div>
+      <div class="ps-compare__bar"><div class="ps-compare__fill" data-pct="58" style="background:#ffce00"></div></div>
+      <span class="ps-compare__reviews">2 reviews</span>
+    </div>
+    <div class="ps-compare__card">
+      <div class="ps-compare__head"><span class="ps-compare__name">orbis.</span><span class="ps-compare__score">2.6</span></div>
+      <div class="ps-compare__bar"><div class="ps-compare__fill" data-pct="52" style="background:#ff7a1a"></div></div>
+      <span class="ps-compare__reviews">21 reviews</span>
+    </div>
+  </div>
+
+  <p class="ps-compare__footnote">Ratings as of August 2026. Based on publicly available Trustpilot scores. <a href="https://uk.trustpilot.com/review/peoplesafe.co.uk" target="_blank" rel="noopener">See live ratings on Trustpilot →</a></p>
+</section>
+<script>
+  (function(){
+    var bars = document.querySelectorAll('.ps-compare__fill');
+    if (!('IntersectionObserver' in window)) { bars.forEach(function(b){ b.style.width = b.dataset.pct + '%'; }); return; }
+    var io = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.dataset.pct + '%';
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    bars.forEach(function(b){ io.observe(b); });
+  })();
+</script>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-text-image-2024 {"name":"acf/cb-text-image-2024","data":{"order":"Text Image","_order":"field_664dbb8161653","pre_title":"Customer Success & Support","_pre_title":"field_664dbbae61654","title":"Real people who know your account","_title":"field_664dbbb761655","content":"Not a call queue — a Customer Success team who understand your business and make sure your service keeps working exactly the way you need it to, long after go-live.","_content":"field_664dbbbd61656","cta":{"title":"","url":"","target":""},"_cta":"field_664dbbcf61657","image":"","_image":"field_664dbbda61658","vimeo_id":"","_vimeo_id":"field_667bf839b578b"},"mode":"edit"} /-->
+
+<!-- wp:spacer -->
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-text-image-2024 {"name":"acf/cb-text-image-2024","data":{"order":"Text Image","_order":"field_664dbb8161653","pre_title":"Onboarding","_pre_title":"field_664dbbae61654","title":"Live in days, done properly","_title":"field_664dbbb761655","content":"Our onboarding specialists set up every device, app and process correctly from day one, so your team is protected from the moment you go live — not weeks later.","_content":"field_664dbbbd61656","cta":{"title":"","url":"","target":""},"_cta":"field_664dbbcf61657","image":"","_image":"field_664dbbda61658","vimeo_id":"","_vimeo_id":"field_667bf839b578b"},"mode":"edit"} /-->
+
+<!-- wp:spacer -->
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-text-image-2024 {"name":"acf/cb-text-image-2024","data":{"order":"Text Image","_order":"field_664dbb8161653","pre_title":"Nexus","_pre_title":"field_664dbbae61654","title":"Award-winning management platform","_title":"field_664dbbb761655","content":"Nexus connects your staff, managers and our 24/7 control centre in one place, so people risk is managed proactively, not just reacted to.","_content":"field_664dbbbd61656","cta":{"title":"Explore Nexus","url":"https://peoplesafe.co.uk/nexus/","target":""},"_cta":"field_664dbbcf61657","image":"","_image":"field_664dbbda61658","vimeo_id":"","_vimeo_id":"field_667bf839b578b"},"mode":"edit"} /-->
+
+<!-- wp:spacer -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-logo-slider {"name":"acf/cb-logo-slider","data":{"title":"Join 375,000 employees already protected by Peoplesafe","_title":"field_6266774be8bc2","logos_0_logo":11113,"_logos_0_logo":"field_62053d5e8aca8","logos_1_logo":3108,"_logos_1_logo":"field_62053d5e8aca8","logos_2_logo":6655,"_logos_2_logo":"field_62053d5e8aca8","logos_3_logo":7966,"_logos_3_logo":"field_62053d5e8aca8","logos_4_logo":8032,"_logos_4_logo":"field_62053d5e8aca8","logos_5_logo":3092,"_logos_5_logo":"field_62053d5e8aca8","logos_6_logo":3106,"_logos_6_logo":"field_62053d5e8aca8","logos_7_logo":8249,"_logos_7_logo":"field_62053d5e8aca8","logos_8_logo":7956,"_logos_8_logo":"field_62053d5e8aca8","logos_9_logo":8248,"_logos_9_logo":"field_62053d5e8aca8","logos":10,"_logos":"field_62053d4f8aca7","show_case_study_link":["Yes"],"_show_case_study_link":"field_626816613d3b8"},"mode":"edit"} /-->
+
+<!-- wp:html -->
+[trustpilot_slider]
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-case-study-quotes-2024 {"name":"acf/cb-case-study-quotes-2024","data":{"quotes_0_logo":"","_quotes_0_logo":"field_667c11ad2fa01","quotes_0_quote":"“The Peoplesafe app gives our people an added layer of safety particularly for many of our colleagues that work alone. It also helps us to address an area we have less control: attacks by members of the public.”","_quotes_0_quote":"field_667c11ad2fa02","quotes_0_attribution":"Adam Elsworth, Safety Director ","_quotes_0_attribution":"field_667c11ad2fa03","quotes_0_image":11116,"_quotes_0_image":"field_667c11ad2fa04","quotes_1_logo":"","_quotes_1_logo":"field_667c11ad2fa01","quotes_1_quote":"“Giving everyone access to Peoplesafe means they have the peace of mind that they are supported with a professional service should anything unexpected happen.”","_quotes_1_quote":"field_667c11ad2fa02","quotes_1_attribution":"Steve Low, Regional Health & Safety Officer","_quotes_1_attribution":"field_667c11ad2fa03","quotes_1_image":9261,"_quotes_1_image":"field_667c11ad2fa04","quotes_2_logo":"","_quotes_2_logo":"field_667c11ad2fa01","quotes_2_quote":"“The peace of mind you have from knowing there is emergency contact available at all times can’t be underestimated. We want to know people are safe 24/7 because personal safety isn't just a 9-5 issue.”","_quotes_2_quote":"field_667c11ad2fa02","quotes_2_attribution":"Phil Young, Local Security Management Specialist","_quotes_2_attribution":"field_667c11ad2fa03","quotes_2_image":9262,"_quotes_2_image":"field_667c11ad2fa04","quotes":3,"_quotes":"field_667c11ad2fa00"},"mode":"edit"} /-->
+
+<!-- wp:spacer -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-stat-spinner {"name":"acf/cb-stat-spinner","data":{"title":"Protection you can count on","_title":"field_66aa4040a2d19","image":8947,"_image":"field_66aa4094a2d1a","spinner_stats_0_prefix":"","_spinner_stats_0_prefix":"field_66aa41d004107","spinner_stats_0_stat":"4.7","_spinner_stats_0_stat":"field_61e591908581d","spinner_stats_0_suffix":"/5","_spinner_stats_0_suffix":"field_62a1c0aaffcc4","spinner_stats_0_title":"Trustpilot Rating","_spinner_stats_0_title":"field_61e591b08581e","spinner_stats_0_description":"Rated 'Excellent' from 199 verified reviews","_spinner_stats_0_description":"field_61e591cc8581f","spinner_stats_1_prefix":"","_spinner_stats_1_prefix":"field_66aa41d004107","spinner_stats_1_stat":"25","_spinner_stats_1_stat":"field_61e591908581d","spinner_stats_1_suffix":"","_spinner_stats_1_suffix":"field_62a1c0aaffcc4","spinner_stats_1_title":"Years Experience","_spinner_stats_1_title":"field_61e591b08581e","spinner_stats_1_description":"Putting people at the heart of safety","_spinner_stats_1_description":"field_61e591cc8581f","spinner_stats_2_prefix":"","_spinner_stats_2_prefix":"field_66aa41d004107","spinner_stats_2_stat":"350","_spinner_stats_2_stat":"field_61e591908581d","spinner_stats_2_suffix":"k","_spinner_stats_2_suffix":"field_62a1c0aaffcc4","spinner_stats_2_title":"Alarm Activations","_spinner_stats_2_title":"field_61e591b08581e","spinner_stats_2_description":"Handled in our ARC every year","_spinner_stats_2_description":"field_61e591cc8581f","spinner_stats":3,"_spinner_stats":"field_61e5914f8581c"},"mode":"edit"} /-->
+
+<!-- wp:spacer {"height":"100px"} -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:acf/cb-gradient-cta {"name":"acf/cb-gradient-cta","data":{"theme":"orange","_theme":"field_61e1961008d3f","image":8201,"_image":"field_665f0d6740fa4","title":"See the reviews for yourself","_title":"field_61e1964908d40","content":"Then decide who you'd trust with your team's safety. Join the thousands of employers already protected by Peoplesafe.","_content":"field_61e1965108d41","cta":{"title":"Get a Quote","url":"https://peoplesafe.co.uk/get-your-quote/","target":""},"_cta":"field_61e1965a08d42","modal_trigger":"","_modal_trigger":"field_6322fef1e250d"},"mode":"edit"} /-->
